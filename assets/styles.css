@@ -34,7 +34,7 @@ html[data-theme="light"] .brand__logo {
   filter: invert(1);
 }
 
-html[data-theme='dark'] .skills__logo {
+html[data-theme="dark"] .skills__logo {
   filter: invert(80%);
 }
 
@@ -52,6 +52,7 @@ body {
   background-color: var(--primary-bg-color);
   font-family: "Inter", Courier, monospace;
   color: var(--text-color);
+  padding: 1.25rem;
 }
 
 a {
@@ -71,9 +72,15 @@ i {
 b {
   font-weight: 400;
 }
+
 h1 {
   font-size: 2.5rem;
   font-weight: 200;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 h1,
@@ -247,7 +254,6 @@ main {
 .skills__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   gap: 0.5rem;
 }
 
@@ -266,6 +272,182 @@ main {
 .skills__logo {
   width: 3.5rem;
   height: 3.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__cover {
+  width: 100%;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+}
+
+.card__description {
+  font-size: 1.125rem;
+  color: var(--text-color);
+}
+
+.card__buttons {
+  display: flex;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__content1,
+.about__content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.about__photo {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-border-color);
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.about__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.about__icons i {
+  font-size: 1.25rem;
+}
+
+.about__content2 .col1,
+.about__content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 2rem;
+}
+
+.about__content2 .col1 .row1,
+.about__content2 .col1 .row2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.projects .btn {
+  width: auto;
+  margin: auto;
+}
+
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary-border-color);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+.accordion__header span {
+  color: var(--title-color);
+}
+
+.accordion__header.start {
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+.accordion__header.end,
+.accordion__item.active .accordion__body.end {
+  border-radius: 0rem 0rem 0.25rem 0.25rem;
+}
+
+.accordion__item.active .accordion__header.end{
+  border-radius: 0;
+}
+
+.accordion__body {
+  display: none;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border: 1px solid var(--primary-border-color);
+  }
+
+.accordion__item.active .accordion__header {
+  background: var(--secondary-bg-color);
+}
+
+.accordion__item.active .accordion__body {
+  display: flex;
+}
+
+.accordion__item.active .bi-caret-down-fill {
+  transform: rotate(180deg);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact .btn {
+  width: auto;
+}
+
+.contact .email {
+  text-transform: lowercase;
 }
 
 footer {
@@ -307,6 +489,8 @@ footer p {
 
   h2 {
     font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   main,
@@ -424,6 +608,23 @@ footer p {
   .card__buttons .btn,
   .description__buttons .btn {
     width: auto;
+  }
+
+  .projects__card {
+    flex-direction: row;
+  }
+
+  .card__cover {
+    width: 50%;
+  }
+
+  .card__title {
+    font-size: 3.25rem;
+  }
+
+  .card__description,
+  .card__item {
+    font-size: 1.25rem;
   }
 }
 
