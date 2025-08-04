@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +14,41 @@
   </head>
   <body>
     <header class="header">
+      <nav class="header__nav">
+        <ul class="menu menu--principal">
+          <li class="menu__item">
+            <a class="menu__link active" href="#home">
+              <span class="menu__text">Home</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#projetos">
+              <span class="menu__text">Projetos</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#sobre">
+              <span class="menu__text">Sobre</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#contatos">
+              <span class="menu__text">Contatos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div class="header__brand">
-        <img class="brand__logo" src="images/favicon.ico" alt="Logo WS" />
+        <a href="#home">
+          <img class="brand__logo" src="images/favicon.ico" alt="Logo WS"
+        /></a>
       </div>
-
-      <i id="toggleTheme" class="bi bi-brightness-high"></i>
+      <div class="header__toggle">
+        <i id="toggleTheme" class="bi bi-sun"></i>
+      </div>
     </header>
 
-    <nav>
+    <nav class="nav--mobile">
       <ul class="menu menu--mobile">
         <li class="menu__item">
           <a class="menu__link active" href="#home">
@@ -49,6 +76,31 @@
         </li>
       </ul>
     </nav>
-    <h1>Willams Silva</h1>
+    <main>
+      <div class="main__content1">
+        <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          nobis.
+        </p>
+        <ul class="menu menu--social">
+          <li>
+            <a class="menu__link" href=""
+              ><i class="menu__icon bi bi-github"></i
+            ></a>
+          </li>
+          <li>
+            <a class="menu__link" href=""
+              ><i class="menu__icon bi bi-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="btn btn--primary">
+          <span>Ver Projetos</span>
+          <i class="bi bi-arrow-down-right"></i>
+        </button>
+      </div>
+    </main>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>
