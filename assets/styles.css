@@ -30,6 +30,10 @@
   --icon-color: #56575a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html[data-theme="light"] .brand__logo {
   filter: invert(1);
 }
@@ -145,8 +149,11 @@ p {
   width: 100vw;
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-bg-color);
   justify-content: space-between;
-  border-top: 1px solid var(--border-color);
+  z-index: 2;
 }
 
 .menu--mobile .menu__link {
@@ -359,7 +366,7 @@ main {
   height: 4rem;
 }
 
-.card__body .skills__logo  .skills__logo__projcts{
+.card__body .skills__logo .skills__logo__projcts {
   height: 2rem;
 }
 
@@ -514,6 +521,8 @@ footer p {
     border-bottom: 1px solid var(--primary-border-color);
     padding: 1rem 6rem;
     background: var(--primary-bg-color);
+    max-width: 97.9%;
+    top: 0;
   }
 
   .nav--mobile {
