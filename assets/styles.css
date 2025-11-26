@@ -313,6 +313,15 @@ main {
   gap: 2rem;
 }
 
+.projects__card iframe {
+  border: none;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+}
+
 .card__cover {
   width: 100%;
   border-radius: 0.5rem;
